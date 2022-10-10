@@ -23,9 +23,9 @@
         <form name="form" id="form" method="post">
         {% csrf_token %}
        <!---{{form.as_p}}--->
-       <div class="form-group my-4">Marca: {{form.modelo}}</div>
-       <div class="form-group my-4">Ano: {{form.Marca}}</div>
-       <div class="form-group my-4">Modelo: {{form.ano}}</div>
+       <div class="form-group my-4">Modelo: {{form.modelo}}</div>
+       <div class="form-group my-4">Marca: {{form.marca}}</div>
+       <div class="form-group my-4">Ano: {{form.ano}}</div>
        <input type="submit" class="btn btn-success" value="Salvar">
     </form>
     </div>
