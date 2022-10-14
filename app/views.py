@@ -1,16 +1,26 @@
-from django.shortcuts import render
+from ensurepip import bootstrap
+from django.shortcuts import redirect, render
+from django.urls import is_valid_path
 from app.forms import CarrosForm
+from app.models import Carros
 
-# Create your views here.
+
 def home(request):
-    return render(request, 'index.html')
+    data = {}
+    data['crud'] = Carros.objects.all()
+    return render(request, 'index.html', data)
 
 def form(request):
     data = {}
     data['form'] = CarrosForm()
     return render(request, 'form.html', data)
-    
 
+def create(request):
+    form = CarrosForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return redirect('home')
+    
 
 
 

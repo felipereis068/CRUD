@@ -10,6 +10,7 @@
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 
+
 <body>
     <div class="col-8 m-auto pt-2 pb-2 text-center">
         <h1>Crud com python </h1>
@@ -27,10 +28,20 @@
                     <th scope="col">Modelo</th>
                     <th scope="col">Marca</th>
                     <th scope="col">Ano</th>
+                    <th scope="col">Ações</th>
                 </tr>
             </thead>
+            <tbody>
+            {% for crud in crud %}
+            <tr>
+                <td>{{crud.id}}</td>
+                <td>{{curd.modelo}}</td>
+                <td>{{crud.ano}}</td>
+            </tr>    
+            {% endfor} 
+
+            </tbody>
         </table>
     </div>
 </body>
-
 </html>
