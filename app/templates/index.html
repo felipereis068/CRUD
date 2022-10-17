@@ -34,14 +34,21 @@
             <tbody>
             {% for crud in crud %}
             <tr>
-                <td>{{crud.id}}</td>
-                <td>{{curd.modelo}}</td>
+                <th>{{crud.id}}</th>
+                <td>{{crud.modelo}}</td>
+                <td>{{crud.marca}}</td>
                 <td>{{crud.ano}}</td>
+                <td>
+                    <a name="" id="" class="btn btn-primary" href="view/{{crud.id}}" role="button">Visualizar</a>
+                    <a name="" id="" class="btn btn-dark" href="view/{{crud.id}}" role="button">Editar</a>
+                    <a name="" id="" class="btn btn-danger" href="view/{{crud.id}}" role="button">Deletar</a>
+                </td>
             </tr>    
-            {% endfor} 
-
+            {% endfor %} 
             </tbody>
         </table>
     </div>
 </body>
+
+
 </html>

@@ -1,6 +1,4 @@
-from ensurepip import bootstrap
 from django.shortcuts import redirect, render
-from django.urls import is_valid_path
 from app.forms import CarrosForm
 from app.models import Carros
 
@@ -20,6 +18,11 @@ def create(request):
     if form.is_valid():
         form.save()
         return redirect('home')
+
+def view(request, pk):
+    data = {}
+    data['crud'] = Carros.objects.get(pk=pk)  
+    return render(request, 'view.html', data)
     
 
 

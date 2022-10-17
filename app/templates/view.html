@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário</title>
+    <title>Visualização</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 
 <body>
     <div class="col-8 m-auto pt-2 pb-2 text-center">
-        <h1>Cadastro</h1>
+        <h1>Visualização</h1>
     </div>
 
     <div class="col-8 m-auto pt-2 pb-3 text-center">
@@ -20,14 +20,9 @@
     </div>
     
     <div class="col-o m-auto pt-4 pb-2 text-center">
-        <form name="form" id="form" action="/create/" method="post">
-        {% csrf_token %}
-       <!--{{form.as_p}}-->
-       <div class="form-group my-4">Modelo: {{form.modelo}}</div>
-       <div class="form-group my-4">Marca: {{form.marca}}</div>
-       <div class="form-group my-4">Ano: {{form.ano}}</div>
-       <input type="submit" class="btn btn-success" value="Salvar">
-    </form>
+        <strong>Modelo: </strong> {{crud.modelo}}<br>
+        <strong>Marca: </strong> {{crud.marca}}<br> 
+        <strong>Ano: </strong> {{crud.ano}}<br>       
     </div>
 </body>
 
