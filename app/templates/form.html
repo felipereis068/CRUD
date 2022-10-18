@@ -19,15 +19,15 @@
         <a href="/" class="btn btn-info">Voltar</a>
     </div>
     
-    <div class="col-o m-auto pt-4 pb-2 text-center">
-        <form name="form" id="form" action="/create/" method="post">
-        {% csrf_token %}
-       <!--{{form.as_p}}-->
-       <div class="form-group my-4">Modelo: {{form.modelo}}</div>
-       <div class="form-group my-4">Marca: {{form.marca}}</div>
-       <div class="form-group my-4">Ano: {{form.ano}}</div>
-       <input type="submit" class="btn btn-success" value="Salvar">
-    </form>
+    <div class="col-8 m-auto pt-4 pb-2 text-center">
+        <form name="form" id="form" action="{% if db %}/update/{{db.id}}/{%else%}/create/{% endif %}" method="post">
+            {% csrf_token %}
+            <!--{{form.as_p}}-->
+            <div class="form-group mt-4">Modelo: {{form.modelo}}</div>
+            <div class="form-group mt-4">Marca: {{form.marca}}</div>
+            <div class="form-group mt-4">Ano: {{form.ano}}</div>
+            <input type="submit" class="btn btn-success" value="Salvar">
+        </form>
     </div>
 </body>
 

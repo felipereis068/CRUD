@@ -39,9 +39,9 @@
                 <td>{{crud.marca}}</td>
                 <td>{{crud.ano}}</td>
                 <td>
-                    <a name="" id="" class="btn btn-primary" href="view/{{crud.id}}" role="button">Visualizar</a>
-                    <a name="" id="" class="btn btn-dark" href="view/{{crud.id}}" role="button">Editar</a>
-                    <a name="" id="" class="btn btn-danger" href="view/{{crud.id}}" role="button">Deletar</a>
+                    <a name="" id="" class="btn btn-dark" href="/view/{{crud.id}}/" role="button">Visualizar</a>
+                    <a name="" id="" class="btn btn-primary" href="/edit/{{crud.id}}/" role="button">Editar</a>
+                    <a name="" id="" class="btn btn-danger" href="" role="button">Deletar</a>
                 </td>
             </tr>    
             {% endfor %} 
@@ -49,6 +49,4 @@
         </table>
     </div>
 </body>
-
-
 </html>
