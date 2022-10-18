@@ -40,5 +40,11 @@ def update(request, pk):
         form.save()
         return redirect('home')
 
+def delete(request, pk):
+    crud = Carros.objects.get(pk=pk)
+    crud.delete()
+    return redirect('home')
+    
+
 
 
