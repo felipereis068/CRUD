@@ -41,12 +41,16 @@
                 <td>
                     <a name="" id="" class="btn btn-dark" href="/view/{{crud.id}}/" role="button">Visualizar</a>
                     <a name="" id="" class="btn btn-primary" href="/edit/{{crud.id}}/" role="button">Editar</a>
-                    <a name="" id="" class="btn btn-danger" href="" role="button">Deletar</a>
+                    <a href="/delete/{{dbs.id}}/" class="btn btn-danger btnDel">Deletar</a>
                 </td>
             </tr>    
             {% endfor %} 
             </tbody>
         </table>
     </div>
+
+    {% load static %}
+    <script src="{% static 'javascript.js' %}"></script>
+
 </body>
 </html>
